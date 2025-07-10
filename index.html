@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--IMPORTAR FLOWBITE-->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <!--FAVICON-->
+    <link rel="icon" href="/Actividad Autonoma/img/icon.png">
+    <!--ENLACE MIS ESTILOS-->
+    <link rel="stylesheet" href="/Actividad Autonoma/css/styles.css">
+    <title>Home</title>
+</head>
+
+<body class="mx-auto">
+    <!--NAV-->
+    <nav id="inicio" class="bg-white border-gray-200 dark:bg-gray-900 mi-nav">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="https://flowbite.com/" class="flex items-center min-w-0">
+                <img src="/Actividad Autonoma/img/logo.png" class="h-20 logo" alt="Logo" />
+                <span
+                    class="self-center text-2xl font-semibold dark:text-white palabra break-words whitespace-normal px-4">
+                    <em>ITSQMET BLOG</em>
+                </span>
+            </a>
+            <div class="flex md:order-2">
+                <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"
+                    aria-expanded="false"
+                    class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+                <div class="relative hidden md:block">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                        <span class="sr-only">Search icon</span>
+                    </div>
+                    <input type="text" id="search-navbar"
+                        class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 busqueda"
+                        placeholder="Buscar...">
+                </div>
+                <button data-collapse-toggle="navbar-search" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 busqueda"
+                    aria-controls="navbar-search" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+                <div class="relative mt-3 md:hidden">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400 busqueda" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="text" id="search-navbar"
+                        class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 busqueda"
+                        placeholder="Buscar...">
+                </div>
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 palabra"
+                            aria-current="page">Inicio</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                            class="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent palabra">Índice
+                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdownNavbar"
+                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600 mi-nav">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 palabra"
+                                aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="#resumen"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Resumen</a>
+                                </li>
+                                <li>
+                                    <a href="#uno"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Definición
+                                        del DOM</a>
+                                </li>
+                                <li>
+                                    <a href="#dos"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Características
+                                        principales</a>
+                                </li>
+                                <li>
+                                    <a href="#tres"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Objetivos
+                                        y utilidad</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--TITULOS-->
+    <div class="text-center px-4 sm:px-6 lg:px-8 titulo1">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold">
+            <strong>Programación páginas web: JavaScript y PHP</strong>
+        </h2>
+    </div>
+    <div>
+        <h4 class="titulo2">Autor: Eduardo Sebastián Tamayo - 09 de Julio - 12 Min de lectura</h4>
+    </div>
+    <!--CONTENEDOR-->
+    <div class="flex justify-center">
+        <img src="/Actividad Autonoma/img/arbol_DOM.png" alt="arbol_DOM"
+            class="mx-auto w-full max-w-[500px] h-auto object-contain border-2 border-black rounded-lg shadow-sm" />
+    </div>
+
+    <!--CARTA-->
+    <div id="resumen" class="flex justify-center px-4">
+        <a class="block w-full max-w-[800px] p-6 bg-white text-black hover:bg-gray-50">
+            <h3 class="titulo3"><strong><em>Resumen</em></strong></h3>
+            <p class="texto">
+                <br>El <strong>Document Object Model (DOM)</strong> es una de las APIs más críticas en el desarrollo web
+                moderno.
+                Representa la estructura completa de un documento HTML/XML como un árbol de objetos jerárquico,
+                donde cada elemento, atributo y fragmento de texto se convierte en un nodo accesible
+                programáticamente. Esta representación dinámica permite que lenguajes como JavaScript no solo lean
+                el contenido estático de la página, sino que puedan modificarlo en tiempo real, reaccionar a
+                interacciones del usuario, y actualizar la interfaz sin necesidad de recargar. <br><br>
+                La magia del DOM radica en cómo sincroniza automáticamente los cambios entre el código y lo que ve
+                el usuario. Por ejemplo, cuando un script modifica el texto de un <strong>p</strong>, el navegador
+                inmediatamente refleja este cambio en pantalla. Esta capacidad es fundamental para aplicaciones web
+                complejas
+                como editores de documentos en línea, dashboards en tiempo real, o interfaces de arrastrar y
+                soltar. Sin el DOM, la web sería tan estática como un documento PDF.
+            </p>
+        </a>
+    </div>
+    <!--CARTA 1-->
+    <div id="uno" class="flex justify-center px-4">
+        <a class="block w-full max-w-[800px] p-6 bg-white text-black hover:bg-gray-50">
+            <h3 class="tituloCartas"><strong><em>1. Definición técnica del DOM</em></strong></h3><br>
+            <!--CONTENEDOR-->
+            <div class="flex justify-center">
+                <img src="/Actividad Autonoma/img/diagrama_DOMvsHTML.png" alt="arbol_DOM"
+                    class="mx-auto w-full max-w-[500px] h-auto object-contain border-2 border-black rounded-lg shadow-sm" />
+            </div>
+            <p class="texto">
+                <br>El DOM es oficialmente definido por el W3C como una interfaz multiplataforma e independiente del
+                lenguaje
+                que trata documentos HTML/XHTML como una estructura de árbol donde cada nodo es un objeto. Estos objetos
+                tienen propiedades (como parentNode, childNodes) y métodos (appendChild(), remove()) que permiten
+                manipulación programática.
+                <br><br>
+                Una diferencia crucial es que mientras el HTML es texto estático (el código fuente que escribes), el DOM
+                es la representación viva que el navegador construye al parsear ese HTML. Incluso puede incluir nodos no
+                presentes en el HTML original, como aquellos añadidos dinámicamente por JavaScript. El DOM también
+                normaliza diferencias entre navegadores, proporcionando una API consistente para trabajar con
+                documentos.
+                <br><br>
+                Profundizando en su arquitectura, el DOM tiene varios niveles: Core DOM (para cualquier documento
+                estructurado), HTML DOM (específico para HTML), y APIs adicionales como Events DOM. Esta modularidad
+                permite extender sus capacidades según las necesidades del proyecto.
+            </p>
+        </a>
+    </div>
+    <!--CARTA 2-->
+    <div id="dos" class="flex justify-center px-4">
+        <a class="block w-full max-w-[800px] p-6 bg-white text-black hover:bg-gray-50">
+            <h3 class="tituloCartas"><strong><em>2. Características y capacidades avanzadas</em></strong></h3><br>
+            <!--CONTENEDOR-->
+            <div class="flex justify-center">
+                <img src="/Actividad Autonoma/img/selectors_html.png" alt="selectores_html"
+                    class="mx-auto w-full max-w-[500px] h-auto object-contain border-2 border-black rounded-lg shadow-sm" />
+            </div>
+            <p class="texto">
+                <br>
+                <li>
+                    <strong>Selección precisa de elementos: </strong>Métodos como querySelector() usan selectores CSS
+                    para localizar nodos, permitiendo consultas complejas como document.querySelector('div.user-panel >
+                    input[name="login"]'). getElementById() sigue siendo el método más rápido para acceder a elementos
+                    únicos.
+                </li>
+                <br>
+                <li>
+                    <strong>Manipulación avanzada: </strong>Además de innerHTML, propiedades como classList permiten
+                    manipular clases CSS dinámicamente, mientras dataset accede a atributos data-*. Métodos como
+                    insertAdjacentHTML() ofrecen mayor control sobre la inserción de contenido.
+                </li>
+                <br>
+                <li>
+                    <strong>Gestión de eventos: </strong>El sistema de eventos del DOM soporta desde clicks básicos
+                    hasta gestos táctiles complejos. Técnicas como event delegation (event.target.closest()) optimizan
+                    el rendimiento en interfaces con muchos elementos interactivos.
+                </li>
+                <br>
+                <li>
+                    <strong>Compatibilidad y rendimiento: </strong>Aunque estandarizado, algunas APIs como Shadow DOM
+                    requieren polyfills para navegadores antiguos. Técnicas como debouncing en scroll events o Virtual
+                    DOM (usado por React) mitigan problemas de rendimiento en aplicaciones pesadas.
+                </li>
+                <br>
+            </p>
+        </a>
+    </div>
+    <!--CARTA 3-->
+    <div id="tres" class="flex justify-center px-4">
+        <a class="block w-full max-w-[800px] p-6 bg-white text-black hover:bg-gray-50">
+            <h3 class="tituloCartas"><strong><em>3. Aplicaciones prácticas en desarrollo web</em></strong></h3><br>
+            <!--CONTENEDOR-->
+            <div class="flex justify-center">
+                <img src="/Actividad Autonoma/img/SPAs_imagen.png" alt="SPAs_img"
+                    class="mx-auto w-full max-w-[500px] h-auto object-contain border-2 border-black rounded-lg shadow-sm" />
+            </div>
+            <p class="texto">
+                <br>
+                <li>
+                    <strong>Single Page Applications (SPAs): </strong>Frameworks como React o Angular usan el DOM para
+                    renderizar interfaces dinámicas. La History API (parte del DOM) permite navegación sin recargas,
+                    creando experiencias similares a apps nativas.
+                </li>
+                <br>
+                <li>
+                    <strong>Validación de formularios en tiempo real: </strong>Combinando input events con Constraint
+                    Validation API, se puede mostrar feedback inmediato ("Este email es inválido") antes de enviar datos
+                    al servidor.
+                </li>
+                <br>
+                <li>
+                    <strong>Animaciones performantes: </strong>APIs como requestAnimationFrame() sincronizan animaciones
+                    con el refresco de pantalla, mientras MutationObserver detecta cambios estructurales para efectos
+                    específicos.
+                </li>
+                <br>
+                <li>
+                    <strong>Integración con Web Components: </strong>Custom Elements y Shadow DOM permiten crear
+                    componentes reutilizables encapsulados, revolucionando el desarrollo frontend modular.
+                </li>
+                <br>
+            </p>
+        </a>
+    </div>
+    <!--TITULO-->
+    <h3 class="tituloCartas"><strong><em>Preguntas Frecuentes sobre el DOM</em></strong></h3><br>
+    <!-- ACORDEON -->
+    <div class="mx-auto w-full max-w-[800px] px-4 py-8">
+        <div id="accordion-collapse" data-accordion="collapse">
+            <div class="mb-1">
+                <h2 id="accordion-collapse-heading-1">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 text-lg font-semibold text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 focus:ring-2 focus:ring-amber-300 transition-all texto"
+                        data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+                        aria-controls="accordion-collapse-body-1">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            ¿Cómo afecta el DOM al rendimiento web?
+                        </span>
+                        <svg data-accordion-icon class="w-5 h-5 text-gray-600 shrink-0" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                    <div class="p-5 border border-t-0 border-gray-200 bg-white">
+                        <p class="mb-3 text-gray-800 font-medium">Las operaciones DOM son costosas. Acceder
+                            repetidamente a propiedades como offsetHeight fuerza reflows (recalculaciones de layout).
+                            Soluciones:</p>
+                        <ul class="ps-5 text-gray-700 list-disc space-y-2">
+                            <li>Cachear referencias a nodos (const btn = document.getElementById('miBoton'))</li>
+                            <li>Usar DocumentFragment para inserciones masivas</li>
+                            <li>Minimizar updates directos al DOM real usando técnicas como Virtual DOM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-1">
+                <h2 id="accordion-collapse-heading-2">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 text-lg font-semibold text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 focus:ring-2 focus:ring-amber-300 transition-all texto"
+                        data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+                        aria-controls="accordion-collapse-body-2">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            ¿Qué es el Shadow DOM y cómo se relaciona?
+                        </span>
+                        <svg data-accordion-icon class="w-5 h-5 text-gray-600 shrink-0" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                    <div class="p-5 border border-t-0 border-gray-200 bg-white">
+                        <p class="text-gray-700">
+                            Es una API que permite crear subárboles DOM encapsulados (ej: inputs de tipo range).
+                            Proporciona aislamiento de estilos y scripts, esencial para componentes reutilizables. Se
+                            accede via element.attachShadow({mode: 'open'}).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 id="accordion-collapse-heading-3">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 text-lg font-semibold text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 focus:ring-2 focus:ring-amber-300 transition-all rounded-b-xl texto"
+                        data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
+                        aria-controls="accordion-collapse-body-3">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            ¿El DOM solo existe para HTML?
+                        </span>
+                        <svg data-accordion-icon class="w-5 h-5 text-gray-600 shrink-0" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+                    <div class="p-5 border border-t-0 border-gray-200 bg-white rounded-b-xl">
+                        <p class="text-gray-700">
+                            No. XML DOM permite manipular documentos XML, y SVG DOM es específico para gráficos
+                            vectoriales. Incluso hay APIs DOM para documentos PDF y formatos custom.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FOOTER-->
+    <footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800 pie-de-pagina">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <div class="mb-4 md:mb-0">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a
+                        href="/Taller Practico Uno/index.html" class="hover:underline">"ITSQMET BLOG"</a>. Todos los
+                    derechos reservados.
+                </span>
+
+                <!-- Sección de fuentes -->
+                <div class="mt-3 text-xs text-gray-500 dark:text-gray-400">
+                    <p class="font-semibold">Fuentes consultadas:</p>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Escarcena, M. (2020).<em>Programación páginas Web: JavaScript y PHP: (1 ed.). RA-MA
+                                Editorial.</em>
+                            https://elibro.net/es/lc/itsqmet/titulos/222656
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="flex flex-wrap items-center text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                <li>
+                    <a href="/Actividad Autonoma/index.html" class="hover:underline me-4 md:me-6">Inicio</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
